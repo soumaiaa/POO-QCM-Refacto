@@ -1,0 +1,36 @@
+<?php
+require_once("./class/Answer.php");
+require_once("./class/question.php");
+require_once("./class/Qcm.php");
+// $qcm = new Qcm();
+// $Answer1= new Answer('Php Orienté Objet');
+// echo '<br>';
+// $Answer2= new Answer('ProgrammatiOn Orientée Outil');
+// echo '<br>';
+// $Answer3= new Answer('Programmation Orientée Objet', Answer::BONNE_REPONSE());
+// echo '<br>';
+// $Answer4= new Answer('Papillon Onirique Ostentatoire');
+// $question1 = new Question('POO signifie :');
+// echo "<br>";
+// $question1->addAnswer($Answer);
+// echo "<br>";
+// $question1->setExplications('Sans commentaires si vous avez eu faux :-°');
+// echo "<br>";
+// $qcm->addQuestion($question1);
+$qcm = new Qcm();
+$question1 = new Question('POO signifie :');
+echo "<br>";
+$question1->addAnswer(new Answer('Php Orienté Objet'));
+echo "<br>";
+$question1->addAnswer(new Answer('ProgrammatiOn Orientée Outil'));
+echo "<br>";
+$question1->addAnswer(new Answer('Programmation Orientée Objet', Answer::BONNE_REPONSE));
+echo "<br>";
+$question1->addAnswer(new Answer('Papillon Onirique Ostentatoire'));
+echo "<br>";
+$question1->setExplications('Sans commentaires si vous avez eu faux :-°');
+echo "<br>";
+$qcm->addQuestion($question1);
+echo "<br>";
+$qcm->generate();
+?>
