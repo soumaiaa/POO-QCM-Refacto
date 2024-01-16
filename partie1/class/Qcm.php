@@ -1,6 +1,6 @@
 <?php
 
-class Qcm {
+class QcmPart1 {
     private array $Questions=[];
     
     public function addQuestion(Question $Question)
@@ -9,6 +9,7 @@ class Qcm {
        
     }
     public function generate(){
+     
      foreach($this->Questions as $Question){
         echo $Question->getCorps()."<br>";
         foreach($Question->getAnswers() as $Answer){

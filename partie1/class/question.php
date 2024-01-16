@@ -5,6 +5,7 @@ class Question {
     private array $Answers=[];
     private $Bonnereponse;
     private $Explications;
+    
     public function __construct($Corps)
     {
         $this->Corps=$Corps;
